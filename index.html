@@ -15,7 +15,7 @@
     <div class="container">
       <div class="slider d-flex">
         <div class="image">
-          <div v-for="item in items" class="item active">
+          <div v-for="item in items" v-bind:class='item.miaClasse' class="item">
             <img :src="item.image" alt="">
             <div class="text text-end">
               <h1 class="text-title">{{item.name}}</h1>
@@ -24,10 +24,10 @@
           </div>
         </div>
         <div class="aside-image">
-          <div v-for="item in items" class="a-item">
+          <div v-for="item in items" class="a-item v-bind:class='item.miaClasse'">
             <img :src="item.image" alt="">
           </div>
-          <div ><i id="up" class="fas fa-chevron-up"></i></div>
+          <div ><i @click="nextSlide" id="up" class="fas fa-chevron-up"></i></div>
           <div ><i id="down" class="fas fa-chevron-down"></i></div>
         </div>
         
