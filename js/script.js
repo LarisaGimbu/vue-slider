@@ -48,11 +48,11 @@ const app = new Vue({
     },
     prevSlide(){
       this.counter--;
-      if(this.counter > this.items.length){
-        counter=0
+      if(this.counter < 0){
+        this.counter= this.items.length -1
       };
-      this.items[counter].miaClasse = 'active';
-      this.items[counter-1].miaClasse ='';
+      this.items[this.counter].miaClasse = 'active';
+      this.items[this.counter+1].miaClasse ='';
     }
   }
 });

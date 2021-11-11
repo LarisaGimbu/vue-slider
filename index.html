@@ -24,11 +24,11 @@
           </div>
         </div>
         <div class="aside-image">
-          <div v-for="item in items" class="a-item v-bind:class='item.miaClasse'">
+          <div v-for="item in items" v-bind:class='item.miaClasse' class="a-item">
             <img :src="item.image" alt="">
           </div>
           <div ><i @click="nextSlide" id="up" class="fas fa-chevron-up"></i></div>
-          <div ><i id="down" class="fas fa-chevron-down"></i></div>
+          <div ><i @click="prevSlide" id="down" class="fas fa-chevron-down"></i></div>
         </div>
         
       </div>
