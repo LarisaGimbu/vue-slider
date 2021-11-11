@@ -37,7 +37,7 @@ const app = new Vue({
     counter: 0,
   },
   methods:{
-    nextSlide(){
+    prevSlide(){
       this.counter++;
       console.log(this.counter);
       if(this.counter > this.items.length -1){
@@ -47,7 +47,7 @@ const app = new Vue({
       this.items[this.counter].miaClasse = 'active';
       this.items[this.counter-1].miaClasse = '';
     },
-    prevSlide(){
+    nextSlide(){
       this.counter--;
       if(this.counter < 0){
         this.counter= this.items.length -1
