@@ -42,6 +42,7 @@ const app = new Vue({
       console.log(this.counter);
       if(this.counter > this.items.length -1){
         this.counter = 0
+        this.items[this.items.length-1].miaClasse = '';
       };
       this.items[this.counter].miaClasse = 'active';
       this.items[this.counter-1].miaClasse = '';
@@ -50,6 +51,7 @@ const app = new Vue({
       this.counter--;
       if(this.counter < 0){
         this.counter= this.items.length -1
+        this.items[0].miaClasse ='';
       };
       this.items[this.counter].miaClasse = 'active';
       this.items[this.counter+1].miaClasse ='';
